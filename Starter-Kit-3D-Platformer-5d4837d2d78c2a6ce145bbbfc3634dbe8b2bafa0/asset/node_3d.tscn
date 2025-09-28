@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://dbh23bhhbueew"]
+
+[ext_resource type="Script" uid="uid://bpexqxhdq30bi" path="res://asset/node_3d.gd" id="1_be0f1"]
+[ext_resource type="PackedScene" uid="uid://ckv5crn2sra0a" path="res://asset/Path Straight.glb" id="3_bm0wf"]
+[ext_resource type="PackedScene" uid="uid://bcyribkl3awrk" path="res://Silly Dancing.tscn" id="3_jc768"]
+[ext_resource type="PackedScene" uid="uid://qqpb35c55irn" path="res://No Man's Sky Ship - On Planet.glb" id="4_jc768"]
+[ext_resource type="PackedScene" uid="uid://cw5u1rd4lym4r" path="res://spaceship (1).glb" id="5_7yun0"]
+
+[node name="Node3D" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.78028)
+script = ExtResource("1_be0f1")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.79377, 2.8977, 14.8014)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.993032, 0.114697, -0.0270772, -0.0950025, 0.915058, 0.391974, 0.0697352, -0.38667, 0.919578, 3.64685, 5.41588, 19.0423)
+light_energy = 0.5
+light_indirect_energy = 0.0
+
+[node name="DirectionalLight3D2" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.993032, 0.114697, -0.0270772, -0.0950499, 0.643659, -0.759387, -0.0696705, 0.756669, 0.650076, 3.64685, 5.41588, 19.0423)
+light_energy = 0.5
+light_indirect_energy = 0.0
+
+[node name="DirectionalLight3D3" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.993032, 0.114697, -0.0270772, -0.11726, 0.938668, -0.324272, -0.0117764, 0.325187, 0.945576, 3.64685, 10.7896, 13.5399)
+light_energy = 0.0
+light_indirect_energy = 0.0
+
+[node name="Root Scene" parent="." instance=ExtResource("3_bm0wf")]
+transform = Transform3D(80, 0, 0, 0, 5, 0, 0, 0, 40, 2.28924, -0.183863, -6.60587)
+visible = false
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.12451, -0.930507, -0.344462, 0.316313, -0.366274, 0.875094, -0.940448, -7.00689e-09, 0.339936, 0, 22.6058, 0)
+light_energy = 4.459
+
+[node name="silly" parent="." instance=ExtResource("3_jc768")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.21972)
+
+[node name="silly2" parent="." instance=ExtResource("3_jc768")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.39165, 1.67073, -6.42276)
+
+[node name="silly3" parent="." instance=ExtResource("3_jc768")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.74289, 1.81229, -4.63063)
+
+[node name="silly4" parent="." instance=ExtResource("3_jc768")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.29844, 1.75136, 1.63196)
+
+[node name="No Man\'s Sky Ship - On Planet" parent="." instance=ExtResource("4_jc768")]
+transform = Transform3D(0.18009, 0, 0.98365, 0, 1, 0, -0.98365, 0, 0.18009, 15.8461, 9.72526, -29.4807)
+
+[node name="spaceship (1)" parent="." instance=ExtResource("5_7yun0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9295, 247.869, -800.482)
